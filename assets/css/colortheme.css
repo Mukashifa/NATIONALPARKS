@@ -1,0 +1,187 @@
+   /* Define CSS variables */
+   :root {
+    --theme-color:  #e14519;
+    --hover-color:  #cd3c15;
+    --border-color:#e14519;
+    --text-color: rgb(255, 255, 255);
+  }
+
+  .btn.btn-primary,
+  .btn.btn-secondary {
+    background-color: var(--theme-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--theme-color);
+  }
+
+  .btn.btn-primary:hover,
+  .btn.btn-secondary:hover {
+    background-color: var(--hover-color) !important;
+    color: var(--text-color) !important;
+  }
+
+  .text-primary {
+    color: var(--theme-color) !important;
+  }
+
+  .nav-link.active {
+    color: var(--theme-color) !important;
+  }
+
+  .nav-link:hover {
+    color: var(--theme-color) !important;
+  }
+
+  .btn-play span {
+    border-left: 16px solid var(--theme-color);
+  }
+
+  .img-border::before {
+    border: 5px solid var(--border-color) !important;
+  }
+
+  .header-carousel .owl-nav .owl-prev:hover,
+  .header-carousel .owl-nav .owl-next:hover {
+    background: var(--theme-color);
+    border-color: var(--theme-color);
+  }
+
+  .header-carousel .owl-dot.active {
+    background: var(--theme-color);
+    border-color: var(--theme-color);
+  }
+
+  .testimonial-carousel .owl-item.center .testimonial-item img {
+    border-color: var(--border-color) !important;
+  }
+
+  .testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--theme-color);
+  }
+
+  .btn-social:hover {
+    color: var(--theme-color) !important;
+  }
+
+  .btn.btn-link:hover {
+    color: var(--theme-color) !important;
+  }
+
+  .border-bottom:hover {
+    color: var(--theme-color) !important;
+  }
+
+  /* Theme Switcher Styles */
+  .theme-switcher {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+  }
+
+  .theme-switcher:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 15px var(--box-shadow-color);
+  }
+
+  .theme-switcher span {
+    font-size: 20px;
+  }
+
+  /* Modal Styles for Theme Box */
+  .theme-box {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 20px;
+    width: 180px;
+    height: 220px;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+    z-index: 999;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  /* Active state for theme box */
+  .theme-box.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .theme-box button {
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .theme-box button:hover {
+    transform: scale(1.1);
+    background-color: #f4f4f4;
+  }
+
+  /* Color Buttons */
+  .theme-box button.aqua {
+    background-color: aqua;
+  }
+
+  .theme-box button.red {
+    background-color: red;
+  }
+
+  .theme-box button.green {
+    background-color: lightgreen;
+  }
+
+  .theme-box button.blue {
+    background-color: lightblue;
+  }
+
+  .theme-box button.purple {
+    background-color: thistle;
+  }
+
+  .theme-box button.orange {
+    background-color: orange;
+  }
+
+  /* Content Styling */
+
+
+
+  /* Backdrop for the modal */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .backdrop.active {
+    display: block;
+    opacity: 1;
+  }
